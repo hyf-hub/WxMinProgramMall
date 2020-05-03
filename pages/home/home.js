@@ -1,18 +1,34 @@
 // pages/home/home.js
+import {
+  getHomeData
+} from '../../nethwork/home'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    banner: {},
+    feature:{},
   },
-
+  _getHomeData() {
+    getHomeData()
+    .then(res => {
+      const banner = res.data.data.banner.list.map(item=>item.image)
+      this.setData({
+          banner,
+          feature: res.data.data.recommend.list
+        })
+      })
+  },
+  getData(){
+    this._getHomeData();
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData()
   },
 
   /**
@@ -27,6 +43,7 @@ Page({
    */
   onShow: function () {
 
+    // console.log(getHomeData);
   },
 
   /**

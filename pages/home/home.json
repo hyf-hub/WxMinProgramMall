@@ -1,5 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "w-swiper":"/components/w-swiper/w-swiper",
+    "w-Feature":"./childcpms/w-Feature/w-Feature"
+  },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#ff5777",
   "navigationBarTitleText": "购物街",

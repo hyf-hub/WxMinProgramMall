@@ -1,0 +1,11 @@
+<!-- pages/home/childcpms/w-Feature/w-Feature.wxml -->
+<view class="feature">
+  <block wx:for="{{recommend}}" wx:key="index">
+    <view class="item">
+      <image class="" src="{{item.image}}" mode="widthFix" lazy-load />
+      <view>{{item.title}}</view>
+    </view>
+  </block>
+</view>
+
+<image class="" src="/assets/images/home/recommend_bg.jpg" mode="widthFix" />
