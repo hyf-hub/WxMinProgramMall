@@ -6,6 +6,8 @@
   <w-swiper list="{{banner}}" />
   
   <!-- 推荐封面 -->
-  
   <w-Feature  recommend="{{feature}}" />
+
+  <!-- Tabbar -->
+  <w-tabbar  titleType="{{titleType}}" bind:typechange = "typechange"/>
 </scroll-view>

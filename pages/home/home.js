@@ -1,6 +1,7 @@
 // pages/home/home.js
 import {
-  getHomeData
+  getHomeData,
+  getgoodsData
 } from '../../nethwork/home'
 Page({
 
@@ -9,20 +10,66 @@ Page({
    */
   data: {
     banner: {},
-    feature:{},
+    feature: {},
+    titleType: ['流行', '新款', '精选'],
+    goodslist: {
+      'pop': {
+        list: []
+      },
+      'new': {
+        list: []
+      },
+      'sell': {
+        list: []
+      }
+    },
+    currentType: 'pop'
   },
   _getHomeData() {
     getHomeData()
-    .then(res => {
-      const banner = res.data.data.banner.list.map(item=>item.image)
-      this.setData({
+      .then(res => {
+        const banner = res.data.data.banner.list.map(item => item.image)
+        this.setData({
           banner,
           feature: res.data.data.recommend.list
         })
       })
   },
-  getData(){
+  _getgoodsData(type){
+    getgoodsData(type,1)
+    .then(res=>{
+      let temp = this.data.goodslist;
+      temp[type].list.push(...res.data.data.list)
+      this.setData({
+        goodslist:temp
+      })
+    })
+  },
+  getData() {
     this._getHomeData();
+    this._getgoodsData('pop');
+    this._getgoodsData('new');
+    this._getgoodsData('sell');
+  },
+  // tabbar点击事件
+  typechange(event) {
+    const index = event.detail;
+    let temp = 'pop'
+    switch (index) {
+      case 0:
+        temp = 'pop';
+        break
+      case 1:
+        temp = 'new';
+        break
+      case 2:
+        temp = 'sell';
+        break
+    }
+    this.setData({
+      currentType: temp
+    })
+    console.log(temp);
   },
   /**
    * 生命周期函数--监听页面加载

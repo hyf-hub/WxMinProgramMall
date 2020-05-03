@@ -1,0 +1,15 @@
+/* components/w-tabbar/w-tabbar.wxss */
+.tab{
+  display: flex;
+  background-color: white;
+  text-align: center;
+}
+.item{
+  flex:1;
+  color:#ff5777;
+  line-height: 60prx;
+  padding-bottom: 20rpx;
+}
+.active{
+  border-bottom: 4rpx solid royalblue;
+}

@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "w-swiper":"/components/w-swiper/w-swiper",
-    "w-Feature":"./childcpms/w-Feature/w-Feature"
+    "w-Feature":"./childcpms/w-Feature/w-Feature",
+    "w-tabbar":"/components/w-tabbar/w-tabbar"
   },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#ff5777",
