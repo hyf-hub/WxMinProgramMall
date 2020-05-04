@@ -23,7 +23,12 @@ Page({
         list: []
       }
     },
-    currentType: 'pop'
+    currentType: 'pop',
+    IsBackShow: false,
+    scrollTop: 0,
+    IsTarbBar1: false,
+    TabbarTop: 0,
+    TarbarHeight: 0
   },
   _getHomeData() {
     getHomeData()
@@ -35,15 +40,18 @@ Page({
         })
       })
   },
-  _getgoodsData(type){
-    getgoodsData(type,1)
-    .then(res=>{
-      let temp = this.data.goodslist;
-      temp[type].list.push(...res.data.data.list)
-      this.setData({
-        goodslist:temp
+  _getgoodsData(type) {
+    let page = this.data.goodslist[this.data.currentType].page + 1 || 1;
+    getgoodsData(type, page)
+      .then(res => {
+        let temp = this.data.goodslist;
+        temp[type].list.push(...res.data.data.list)
+        temp[type].page = page
+        this.setData({
+          goodslist: temp
+        })
+        wx.hideLoading();
       })
-    })
   },
   getData() {
     this._getHomeData();
@@ -67,9 +75,80 @@ Page({
         break
     }
     this.setData({
-      currentType: temp
+      currentType: temp,
+      // scrollTop: this.data.TabbarTop + 50
     })
-    console.log(temp);
+    let item = this.data.goodslist
+    // 判断是否点击过 没有点击过会跳到上面
+    if (!item[temp].clocked) {
+      this.setData({
+        scrollTop: this.data.TabbarTop + 50
+      })
+    }
+    item[temp].clocked = true;
+    this.setData({
+      goodslist: item
+    })
+    // 同步标签
+    this.selectComponent('#tabbar').settype(index);
+    this.selectComponent('#tabbar-temp').settype(index);
+
+    // let tabbar1 =  this.selectComponent('#tabbar1')
+    // tabbar1.changetype()
+    // tabbar.changeType(this.data.currentType);
+  },
+  backtop() {
+    this.setData({
+      scrollTop: 584
+    })
+  },
+  imgload() {
+    const query = wx.createSelectorQuery()
+    query.select('#tabbar').boundingClientRect()
+    query.selectViewport().scrollOffset()
+    query.exec(res => {
+      // res[0].top // #the-id节点的上边界坐标
+      this.setData({
+        TabbarTop: res[1].scrollHeight, // 显示区域的竖直滚动位置
+        TarbarHeight: res[0].height
+      })
+    })
+  },
+  scrollchange(event) {
+    // 返回顶部按钮是否显示
+    const IsShow = this.data.IsBackShow
+    const tabbar = this.data.IsTarbBar1
+    const tabbartop = this.data.TabbarTop + this.data.TarbarHeight
+    const scrollTop = event.detail.scrollTop
+    // console.log(event);
+    // console.log(query);
+    if (scrollTop > 625 && !IsShow) {
+      this.setData({
+        IsBackShow: true
+      })
+    } else if (IsShow && scrollTop < 625) {
+      this.setData({
+        IsBackShow: false
+      })
+    }
+    // 控制tarbar是否显示
+    if (scrollTop > tabbartop && !tabbar) {
+      this.setData({
+        IsTarbBar1: true
+      })
+    } else if (tabbar && scrollTop < tabbartop) {
+      this.setData({
+        IsTarbBar1: false
+      })
+    }
+  },
+  // 上拉加载更多
+  loadmore() {
+    wx.showLoading({
+      title: "加载中",
+      mask: true,
+    });
+    this._getgoodsData(this.data.currentType);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -117,9 +196,9 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  // onReachBottom: function () {
 
-  },
+  // },
 
   /**
    * 用户点击右上角分享

@@ -3,12 +3,13 @@
   display: flex;
   background-color: white;
   text-align: center;
+  align-items: center;
+  line-height: 60prx;
 }
 .item{
   flex:1;
   color:#ff5777;
-  line-height: 60prx;
-  padding-bottom: 20rpx;
+  padding: 20rpx 0 20rpx 0;
 }
 .active{
   border-bottom: 4rpx solid royalblue;

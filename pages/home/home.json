@@ -1,11 +1,14 @@
 {
   "usingComponents": {
     "w-swiper":"/components/w-swiper/w-swiper",
-    "w-Feature":"./childcpms/w-Feature/w-Feature",
-    "w-tabbar":"/components/w-tabbar/w-tabbar"
+    "w-tabbar": "/components/w-tabbar/w-tabbar",
+    "w-goodslist": "/components/w-goodslist/w-goodslist",
+    "w-backtop":"/components/backtop/Backtop",
+    "w-Feature":"./childcpms/w-Feature/w-Feature"
   },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#ff5777",
   "navigationBarTitleText": "购物街",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "onReachBottomDistance": 50
 }

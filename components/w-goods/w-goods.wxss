@@ -1,0 +1,31 @@
+/* components/w-goods/w-goods.wxss */
+.goods{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.cfav{
+  font-size: 30rpx;
+}
+.title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.price {
+  color:#ff5777;
+  padding: 0 60rpx;
+}
+.goods image {
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+.icon{
+  width: 30rpx;
+  height: 30rpx;
+}

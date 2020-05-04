@@ -1,13 +1,20 @@
 <!--pages/home/home.wxml-->
-<scroll-view class="" scroll-x="false" scroll-y="false" upper-threshold="50" lower-threshold="50" 
-  scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" 
-  bindscrolltoupper="" bindscrolltolower="" bindscroll="">
+<scroll-view class="scroll"  scroll-top="{{scrollTop}}"  scroll-with-animation  lower-threshold="100" scroll-y  bindscrolltolower = "loadmore" bindscroll="scrollchange">
   <!-- 轮播图 -->
   <w-swiper list="{{banner}}" />
   
   <!-- 推荐封面 -->
-  <w-Feature  recommend="{{feature}}" />
-
+  <w-Feature  recommend="{{feature}}" bind:loaded = "imgload"/>
+`
   <!-- Tabbar -->
-  <w-tabbar  titleType="{{titleType}}" bind:typechange = "typechange"/>
+  <view hidden="{{!IsTarbBar1}}">
+        <w-tabbar id="tabbar-temp" titleType="{{titleType}}" class="tabbar1" bind:typechange="typechange" />
+  </view>
+  <w-tabbar  id="tabbar"   class="{{IsTarbBar1?'visibility':''}}" titleType="{{titleType}}" bind:typechange="typechange" />
+
+  <!-- 商品列表 -->
+  <w-goodslist  list="{{goodslist[currentType].list}}"/>
+
+  <!-- 返回顶部 -->
+  <w-backtop wx:if="{{IsBackShow}}" bind:backtop = "backtop"/>
 </scroll-view>

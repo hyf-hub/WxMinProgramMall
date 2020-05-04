@@ -2,7 +2,7 @@
 <view class="feature">
   <block wx:for="{{recommend}}" wx:key="index">
     <view class="item">
-      <image class="" src="{{item.image}}" mode="widthFix" lazy-load />
+      <image class="" src="{{item.image}}" mode="widthFix" lazy-load  bindload = "loaded"/>
       <view>{{item.title}}</view>
     </view>
   </block>

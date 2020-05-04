@@ -1,0 +1,10 @@
+<!-- components/w-goods/w-goods.wxml -->
+<view class="goods">
+  <image src="{{item.show.img}}" mode="widthFix" lazy-load />
+  <view class="bottom">
+    <view class="title">{{item.title}}</view>
+    <text class="price">{{"￥" +item.price}}</text>
+    <image class="icon" src="/assets/images/common/favor.png" lazy-load/>
+    <text class="cfav">{{item.cfav}}</text>
+  </view>
+</view>
