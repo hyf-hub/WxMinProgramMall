@@ -16,14 +16,22 @@
 }
 .price {
   color:#ff5777;
-  padding: 0 60rpx;
+  /* padding: 0 60rpx; */
 }
-.goods image {
+.img {
   border-radius: 5%;
   -webkit-border-radius: 5%;
   -moz-border-radius: 5%;
   -ms-border-radius: 5%;
   -o-border-radius: 5%;
+  width: 100%;
+
+}
+.text{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
 }
 .icon{
   width: 30rpx;

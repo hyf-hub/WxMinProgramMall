@@ -28,7 +28,8 @@ Page({
     scrollTop: 0,
     IsTarbBar1: false,
     TabbarTop: 0,
-    TarbarHeight: 0
+    TarbarHeight: 0,
+    currentScroll: 0
   },
   _getHomeData() {
     getHomeData()
@@ -74,20 +75,19 @@ Page({
         temp = 'sell';
         break
     }
+    // 记录当前滚动的位置
+    // console.log(this.selectComponent('#tabbar'));
+    console.log(this.data.currentScroll);
+    //设置上一个元素的高度
+    let item = this.data.goodslist
+    let type = this.data.currentType
+    item[type].scrollTop = this.data.currentScroll
+    // 获取当前元素的高度
+    let currentScroll = item[temp].scrollTop ? item[temp].scrollTop : this.data.TabbarTop + 50
     this.setData({
       currentType: temp,
-      // scrollTop: this.data.TabbarTop + 50
-    })
-    let item = this.data.goodslist
-    // 判断是否点击过 没有点击过会跳到上面
-    if (!item[temp].clocked) {
-      this.setData({
-        scrollTop: this.data.TabbarTop + 50
-      })
-    }
-    item[temp].clocked = true;
-    this.setData({
-      goodslist: item
+      goodslist: item,
+      scrollTop: currentScroll
     })
     // 同步标签
     this.selectComponent('#tabbar').settype(index);
@@ -102,6 +102,21 @@ Page({
       scrollTop: 584
     })
   },
+  // synctype(type) {
+  //   let temp = 0;
+  //   switch (type) {
+  //     case 'pop':
+  //       temp = 0;
+  //       break
+  //     case 'new':
+  //       temp = 1;
+  //       break
+  //     case 'sell':
+  //       temp = 2;
+  //       break
+  //   }
+  //   return temp
+  // },
   imgload() {
     const query = wx.createSelectorQuery()
     query.select('#tabbar').boundingClientRect()
@@ -114,12 +129,17 @@ Page({
       })
     })
   },
+  // 滚动事件
   scrollchange(event) {
     // 返回顶部按钮是否显示
     const IsShow = this.data.IsBackShow
     const tabbar = this.data.IsTarbBar1
     const tabbartop = this.data.TabbarTop + this.data.TarbarHeight
     const scrollTop = event.detail.scrollTop
+    // this.currentScroll = scrollTop;
+    this.setData({
+      currentScroll: scrollTop
+    })
     // console.log(event);
     // console.log(query);
     if (scrollTop > 625 && !IsShow) {

@@ -1,0 +1,9 @@
+<!-- pages/categroy/childCmps/w-categroyist.wxml -->
+<!-- scroll-top="{{scrolltop}}" -->
+<scroll-view class="scroll"  scroll-y >
+  <block wx:for="{{Categorylist}}" wx:key="index">
+    <view class="item {{currentIndex == index ?'active':''}}" bind:tap="itemClick" data-index="{{index}}">
+      {{item.title}}
+    </view>
+  </block>
+</scroll-view>

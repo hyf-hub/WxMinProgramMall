@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-category-list": "./childCmps/w-categroyist/w-categroyist",
+    "w-iconlist": "./childCmps/w-iconlist/w-iconlist",
+    "w-goodslist": "../../components/w-goodslist/w-goodslist",
+    "w-tabbar": "/components/w-tabbar/w-tabbar"
+  }
 }

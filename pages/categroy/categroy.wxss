@@ -1,1 +1,16 @@
 /* pages/categroy/categroy.wxss */
+.categroy{
+  display: flex;
+}
+.left{
+  width: 25%;
+}
+.right{
+  width: 75%;
+}
+.scroll{
+  height: 100vh;
+}
+.tabbar{
+  margin: 20rpx 0;
+}

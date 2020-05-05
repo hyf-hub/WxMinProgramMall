@@ -1,2 +1,14 @@
-<!--pages/categroy/categroy.wxml-->
-<text>pages/categroy/categroy.wxml</text>
+<!-- pages/categroy/categroy.wxml -->
+<view class="categroy">
+  <w-category-list class="left"  bind:listclcik="listclcik" bind:setcurrentIndex="setcurrentIndex" Categorylist="{{Categorylist}}" />
+  <view class="right">
+    <scroll-view class="scroll"  id="rightlist" scroll-top="{{scrolltop}}" scroll-y>
+      <w-iconlist Showshoplist="{{Showshoplist}}" />
+      <w-tabbar id="tabbar" class="tabbar" titleType="{{titleType}}" bind:typechange="tabbarclick" />
+      <w-goodslist list="{{Showgoodslist}}" />
+    </scroll-view>
+  </view>
+  <!-- <view>
+    
+  </view> -->
+</view>

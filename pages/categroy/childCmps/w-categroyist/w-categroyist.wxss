@@ -1,0 +1,18 @@
+/* pages/categroy/childCmps/w-categroyist.wxss */
+.scroll{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color:#f6f6f6;
+}
+.item{
+  margin: 40rpx 0;
+  padding: 0 20rpx;
+  line-height: 60rpx;
+
+}
+.active{
+  border-left: 8rpx solid deeppink;
+  background-color:white;
+}

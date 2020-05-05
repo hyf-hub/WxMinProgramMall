@@ -1,0 +1,9 @@
+<!-- pages/categroy/childCmps/w-iconlist/w-iconlist.wxml -->
+<view class="block">
+  <block wx:for="{{Showshoplist}}" wx:key="index">
+    <view class="item">
+      <image class="image" src="{{item.image}}" mode="widthFix" lazy-load />
+      <view>{{item.title}}</view>
+    </view>
+  </block>
+</view>
