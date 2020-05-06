@@ -21,6 +21,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    goodsclick(){
+      const iid = this.data.item.iid
+      wx.navigateTo({
+        url: `/pages/home/detail/detail?iid=${iid}`,
+        success: (result)=>{
+          console.log(result);
+        },
+        fail: (err)=>{console.log(err);},
+      });
+    }
   }
 })

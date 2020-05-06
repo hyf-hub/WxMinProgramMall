@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/cart/cart",
     "pages/categroy/categroy",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/home/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,7 +20,8 @@
     "backgroundColor": "",
     "position": "bottom",
     "borderStyle": "black",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "assets/images/tabbar/home.png",

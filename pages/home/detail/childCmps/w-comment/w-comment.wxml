@@ -1,0 +1,30 @@
+<!-- pages/home/detail/childCmps/w-comment/w-comment.wxml -->
+<view class="comment">
+  <view class="top">
+    <view>用户评价</view>
+    <view>更多 > ></view>
+  </view>
+  <view class="userinfo">
+    <image class="" src="{{commentInfo.user.avatar}}" mode="widthFix" lazy-load />
+    <view>{{commentInfo.user.uname}}</view>
+  </view>
+  <view class="content">
+    <view class="comentcontent">{{commentInfo.content}}</view>
+    <view>
+      {{commentInfo.created}}
+                  {{commentInfo.style}}
+                                    {{commentInfo.style}}
+    </view>
+    <block wx:for="{{commentInfo.extraInfo}}" wx:key="index">{{item}}</block>
+  </view>
+  <view class="imagelist">
+      <block wx:for="{{commentInfo.images}}" wx:key="index">
+          <image src="{{item}}" mode="widthFix" lazy-load />
+      </block>
+  </view>
+    
+</view>
+<view>
+  {{sum(a,b)}}
+</view>
+  

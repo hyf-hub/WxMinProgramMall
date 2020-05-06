@@ -1,0 +1,26 @@
+<!-- pages/home/detail/childCmps/w-baseinfo.wxml -->
+<!-- <text>pages/home/detail/childCmps/w-baseinfo.wxml</text> -->
+<view class="info">
+  <view class="title">{{info.title}}</view>
+  <view class="price">
+    <view class="newPrice">{{info.newPrice}}</view>
+    <view class="oldPrice">{{info.oldPrice}}</view>
+    <view class="discount">{{info.discount}}</view>
+  </view>
+  <view class="between  colums">
+    <block wx:for="{{info.colums}}" wx:key="index">
+      <view >
+        {{item}}
+      </view>
+    </block>
+  </view>
+  <view class="serves  between">
+    <block wx:for="{{info.services}}" wx:key="index">
+      <view>
+        <image class="icon" src="{{item.icon}}" mode="widthFix" lazy-load />
+        {{item.name}}
+      </view>
+    </block>
+  </view>
+    
+</view>

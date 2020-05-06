@@ -1,0 +1,22 @@
+<!-- pages/home/detail/childCmps/w-paramInfo/w-paramInfo.wxml -->
+<view class="paramInfo">
+  <view class="top">
+    <block wx:for="{{paramInfo.info}}" wx:key="index">
+      <view class="topitem">
+        <view class="flex1">{{item.key}}</view>
+        <view class="flex1">{{item.value}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="bottom">
+    <block wx:for="{{paramInfo.sizes}}" wx:key="index">
+      <block wx:for="{{item}}" wx:for-item="sizes" wx:for-index="indey" wx:key="indey">
+        <view class="sizeitem">
+          <block wx:for="{{sizes}}" wx:for-item="sizedetail" wx:for-index="indez" wx:key="indez">
+            <view class="flex1 pink">{{sizedetail}}</view>
+          </block>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>

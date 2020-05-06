@@ -1,0 +1,82 @@
+/* pages/home/detail/childCmps/w-shopinfo/w-shopinfo.wxss */
+.shopinfo{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  color: #57606f;
+}
+.bottom{
+  display: flex;
+}
+.head{
+  display: flex;
+  align-items: center;
+  font-size: 40rpx;
+  color: #57606f;
+}
+.icon{
+  width: 120rpx;
+  border-radius: 50%;
+  padding: 0 30rpx;
+}
+.colum{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.colum>view:first-child {
+  font-size: 50rpx;
+}
+.left{
+  display: flex;
+  width: 50%;
+  border-right: 5rpx solid gray;
+  padding-right: 20rpx;
+  justify-content: space-around;
+}
+.flex{
+  display: flex;
+}
+.scroe{
+  justify-content: space-between;
+}
+.right{
+  width: 50%;
+  padding-left: 45rpx;
+}
+.itemscore{
+  /* padding: 0 20rpx; */
+}
+.rightscore{
+  width: 30%;
+  justify-content: space-between;
+
+}
+.textright{
+  text-align: right;
+}
+.textcenter{
+  text-align: center;
+}
+.flex1{
+  flex:1;
+}
+.title{
+  width: 53%;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.button-hover{
+  background-color: grey;
+  color: white;
+}
+.btn{
+  margin-top: 30rpx;
+  background-color: #ced6e0;
+  padding: 0 80rpx;
+}

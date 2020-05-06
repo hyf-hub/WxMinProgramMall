@@ -1,0 +1,42 @@
+/* pages/home/detail/childCmps/w-comment/w-comment.wxss */
+.comment {
+  /* margin-top: 30rpx; */
+  border-top: 15rpx solid #747d8c;
+  padding: 30rpx;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #747d8c;
+}
+
+.top>view {
+  padding: 0 30rpx;
+  line-height: 4em;
+}
+
+.userinfo {
+  display: flex;
+  align-items: center;
+}
+
+.userinfo>image {
+  width: 20%;
+  border-radius: 50%;
+  margin: 0 20rpx;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.comentcontent {
+  text-indent: 2em;
+}
+.content {
+  color: #747d8c;
+}
+.imagelist>image{
+  width: 30%;
+}

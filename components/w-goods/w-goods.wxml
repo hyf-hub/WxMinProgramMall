@@ -1,5 +1,5 @@
 <!-- components/w-goods/w-goods.wxml -->
-<view class="goods">
+<view class="goods" bind:tap="goodsclick">
   <image class="img" src="{{item.show.img || item.img}}" mode="widthFix" lazy-load />
   <view class="bottom">
     <view class="title">{{item.title}}</view>

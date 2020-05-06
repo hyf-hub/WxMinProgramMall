@@ -1,0 +1,12 @@
+<!--pages/home/detail/childCmps/w-detailInfo/detailInfo.wxml-->
+<view class="info">
+  <view>
+    {{detailinfo.desc}}
+  </view>
+    <block wx:for="{{detailinfo.detailImage}}" wx:key="index">   
+      <block wx:for="{{item.list}}"  wx:for-item="images" wx:for-index="indey" wx:key="indey">
+        <image class="images" src="{{images}}" mode="widthFix" lazy-load/>
+      </block>
+    </block>
+</view>
+  

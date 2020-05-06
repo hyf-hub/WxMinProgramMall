@@ -1,0 +1,4 @@
+/* pages/home/detail/childCmps/w-detailInfo/detailInfo.wxss */
+.images{
+  width: 100%;
+}

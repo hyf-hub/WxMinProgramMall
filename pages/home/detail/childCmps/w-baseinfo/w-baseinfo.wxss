@@ -1,0 +1,67 @@
+/* pages/home/detail/childCmps/w-baseinfo.wxss */
+.info {
+  padding: 15rpx;
+  margin-bottom: 10rpx;
+  border-bottom: 10rpx solid gray;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #34495e;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.newPrice {
+  color: #ff5777;
+  font-size: 42rpx;
+  padding: 0 16rpx;
+
+}
+
+.oldPrice {
+  font-size: 30rpx;
+  text-decoration-line: line-through;
+  -moz-text-decoration-line: line-through;
+  align-self: flex-end;
+}
+
+.discount {
+  background-color: #ff5777;
+  border-radius: 16rpx;
+  -webkit-border-radius: 16rpx;
+  -moz-border-radius: 16rpx;
+  -ms-border-radius: 16rpx;
+  -o-border-radius: 16rpx;
+  color: white;
+  padding: 5rpx 20rpx;
+  margin-left: 20rpx;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #34495e;
+}
+
+.serves {
+  color: #34495e;
+  flex-wrap: wrap;
+}
+
+.colums {
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #34495e;
+}
+
+.serves>view:first-child {
+  flex-basis: 30%;
+}
+
+.icon {
+  width: 20rpx;
+}

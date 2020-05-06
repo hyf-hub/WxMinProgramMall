@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "w-swiper" : "/components/w-swiper/w-swiper",
+    "w-baseinfo":"./childCmps/w-baseinfo/w-baseinfo",
+    "w-shopinfo": "./childCmps/w-shopinfo/w-shopinfo",
+    "w-detailInfo": "./childCmps/w-detailInfo/detailInfo",
+    "w-paramInfo": "./childCmps/w-paramInfo/w-paramInfo",
+    "w-comment": "./childCmps/w-comment/w-comment"
+  },
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "商品详情",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark"
+}

@@ -1,0 +1,39 @@
+<!-- pages/home/detail/childCmps/w-shopinfo/w-shopinfo.wxml -->
+<view class="shopinfo">
+  <view class="head">
+    <image class="icon" src="{{info.logo}}" mode="widthFix" lazy-load />
+    <view>{{info.name}}</view>
+  </view>
+  <view class="bottom">
+    <view class="left">
+      <view class="colum">
+        <view>{{info.sells}}</view>
+        <view>{{test}}</view>
+      </view>
+      <view class="colum">
+        <view>{{info.goodsCount}}</view>
+        <view>全部宝贝</view>
+      </view>
+    </view>
+    <view class="right">
+      <block wx:for="{{info.score}}" wx:key="index">
+        <view class="flex">
+          <!-- class="flex scroe" -->
+          <view class="title">{{item.name}}</view>
+          <!-- <view class=""> -->
+          <!-- flex rightscore -->
+          <view class="flex1 textcenter   {{item.isBetter?'red':'green'}}">{{item.score}}</view>
+          <!-- class="itemscore" -->
+          <view class="flex1 textright {{item.isBetter?'red':'green'}}">
+            {{item.isBetter?'高':'低'}}
+          </view>
+          <!-- </view> -->
+        </view>
+      </block>
+    </view>
+  </view>
+  <button class="btn" size="mini"  hover-class="button-hover">
+    进店逛逛
+  </button>
+    
+</view>
