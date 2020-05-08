@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "w-shop": "../w-shop/w-shop"
+  }
+}

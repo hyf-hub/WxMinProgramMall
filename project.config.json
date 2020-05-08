@@ -58,17 +58,17 @@
 			"current": -1,
 			"list": [
 				{
-					"id": -1,
-					"name": "pages/categroy/categroy",
-					"pathName": "pages/categroy/categroy",
-					"query": "",
+					"id": 0,
+					"name": "pages/home/detail/detail",
+					"pathName": "pages/home/detail/detail",
+					"query": "iid=1m70y5k",
 					"scene": null
 				},
 				{
-					"id": 1,
-					"name": "pages/home/detail/detail",
-					"pathName": "pages/home/detail/detail",
-					"query": "iid=1m745k0",
+					"id": -1,
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
+					"query": "iid=1m70y5k",
 					"scene": null
 				}
 			]

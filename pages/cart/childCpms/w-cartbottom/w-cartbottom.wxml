@@ -1,0 +1,11 @@
+<!--pages/cart/childCpms/w-cartbottom/w-cartbottom.wxml-->
+ <view class="bottom">
+   <view class="left">
+     <w-select  class="icon" bind:select = "select" Show="{{isShow}}" />
+     <view>全选</view>
+     <view>总计:￥</view>
+   </view>
+   <view class="right">
+     <view>去计算{{selected}}</view>
+   </view>
+ </view>

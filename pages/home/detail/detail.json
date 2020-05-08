@@ -5,7 +5,9 @@
     "w-shopinfo": "./childCmps/w-shopinfo/w-shopinfo",
     "w-detailInfo": "./childCmps/w-detailInfo/detailInfo",
     "w-paramInfo": "./childCmps/w-paramInfo/w-paramInfo",
-    "w-comment": "./childCmps/w-comment/w-comment"
+    "w-comment": "./childCmps/w-comment/w-comment",
+    "w-goodslist": "/components/w-goodslist/w-goodslist",
+    "w-detailtabbar": "./childCmps/w-detailtabbar/w-detailtabbar"
   },
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTextStyle": "white",

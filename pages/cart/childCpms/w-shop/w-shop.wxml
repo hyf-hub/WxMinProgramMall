@@ -1,0 +1,20 @@
+<!-- pages/cart/childCpms/w-shop/w-shop.wxml -->
+<view>
+  <view class="item">
+    <w-select Show="{{isShow}}" class="icon" bind:select="select" />
+    <!-- <view class="imageparent"> -->
+    <image class="image" src="{{item.imageURL}}" lazy-load />
+    <!-- </view> -->
+    <view class="text">
+      <view>
+        <!-- {{item.title}} -->
+        {{cart}}
+      </view>
+      <view>{{item.desc}}</view>
+      <view class="price">
+        <view>{{'￥' + item.price}}</view>
+        <view>{{'X' + item.count}}</view>
+      </view>
+    </view>
+  </view>
+</view>

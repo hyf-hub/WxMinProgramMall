@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "w-select":"/components/w-select/w-select"
+  }
+}

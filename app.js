@@ -33,7 +33,42 @@ App({
       }
     })
   },
+  addcart(obj) {
+    console.table(obj);
+    let find = this.globalData.catlist.findIndex(item => {
+      return item.iid == obj.iid
+    })
+    if (find != -1) {
+      let count = this.globalData.catlist[find]
+      this.globalData.catlist[find].count = count.count ? count.count + 1 : 2
+
+    } else {
+      this.globalData.catlist.push(obj)
+    }
+    if (this.addCartCallback) {
+      this.addCartCallback()
+    }
+    // console.log(this.globalData.catlist.includes(obj.iid));
+    console.log("添加到购物车");
+
+  },
+  setselect(index) {
+    let select = this.globalData.catlist[index].select
+    this.globalData.catlist[index].setselect = !select
+  },
+  Allselect(chekselect) {
+    let catlist = this.globalData.catlist;
+    this.globalData.catlist = catlist.map(item => item.select = chekselect)
+  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    catlist: [{
+      count: 4,
+      desc: "秋装女2018新款套装时尚晚晚风气质chic港味女神网红两件套装俏皮",
+      iid: "1m7rp9w",
+      imageURL: "//s5.mogucdn.com/mlcdn/c45406/180827_1590j44g2bk619i6655ji20ihikfb_640x960.jpg",
+      price: 68.00,
+      title: "秋装女2018新款套装时尚晚晚风气质chic港味女神网红两件套装俏皮",
+    }]
   }
 })

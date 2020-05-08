@@ -1,0 +1,6 @@
+<!-- components/w-select/w-select.wxml -->
+<!-- <text>components/w-select/w-select.wxml</text> -->
+<view bind:tap="iconclick" class="box">
+      <view wx:if="{{!isShow}}" class="icon"></view>
+      <icon wx:else  type="success" class="selecticon" color="#ff5777" size="21"></icon>
+</view>

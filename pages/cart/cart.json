@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-select": "/components/w-select/w-select",
+    "w-shoplist":"./childCpms/w-shoplist/w-shoplist",
+    "w-shopbottom":"./childCpms/w-cartbottom/w-cartbottom"
+  }
 }

@@ -16,7 +16,12 @@ Component({
   },
   computed: {
     detailtiem(data) {
-      return data.commentInfo + "测试"
+      if (data.commentInfo) {
+        const real = data.commentInfo.created * 1000
+        const date = formatTime(new Date(real), '-')
+        return date
+      }
+      return 0
     }
   },
   /**

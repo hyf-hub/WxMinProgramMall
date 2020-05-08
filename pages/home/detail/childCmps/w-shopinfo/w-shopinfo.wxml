@@ -7,8 +7,8 @@
   <view class="bottom">
     <view class="left">
       <view class="colum">
-        <view>{{info.sells}}</view>
-        <view>{{test}}</view>
+        <view>{{sell}}</view>
+        <view>总销量</view>
       </view>
       <view class="colum">
         <view>{{info.goodsCount}}</view>
@@ -35,5 +35,4 @@
   <button class="btn" size="mini"  hover-class="button-hover">
     进店逛逛
   </button>
-    
 </view>

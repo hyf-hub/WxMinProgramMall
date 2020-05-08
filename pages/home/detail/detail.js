@@ -20,9 +20,10 @@ Page({
     recommends: {}
   },
   onLoad: function (options) {
+    const iid = options.iid
     // 1.获取传入的iid
     this.setData({
-      iid: options.iid
+      iid: iid
     })
 
     // 2.请求商品详情数据
@@ -70,25 +71,50 @@ Page({
   _getRecommends() {
     getRecommends().then(res => {
       this.setData({
-        recommends: res.data.list
+        recommends: res.data.data.list
       })
     })
   },
-//   onAddCart() {
-//     // 1.获取商品对象
-//     const obj = {}
-//     obj.iid = this.data.iid;
-//     obj.imageURL = this.data.topImages[0];
-//     obj.title = this.data.baseInfo.title;
-//     obj.desc = this.data.baseInfo.desc;
-//     obj.price = this.data.baseInfo.realPrice;
+  addcart() {
+    const obj = {}
+    obj.iid = this.data.iid;
+    obj.imageURL = this.data.topImages[0];
+    obj.title = this.data.baseInfo.title;
+    obj.desc = this.data.baseInfo.desc;
+    obj.price = this.data.baseInfo.realPrice;
+    app.addcart(obj)
+  },
+  onShow() {
+    const iid = this.data.iid
+    if (iid == undefined || iid == "undefined") {
+      wx.showModal({
+        title: '获取该商品失败',
+        content: '可能是数据库中无此商品',
+        confirmText: '确定',
+        confirmColor: '#3CC51F',
+        complete: () => {
+          wx.navigateBack({
+            delta: 1
+          })
+        }
+      });
+    }
+  },
+  //   onAddCart() {
+  //     // 1.获取商品对象
+  //     const obj = {}
+  //     obj.iid = this.data.iid;
+  //     obj.imageURL = this.data.topImages[0];
+  //     obj.title = this.data.baseInfo.title;
+  //     obj.desc = this.data.baseInfo.desc;
+  //     obj.price = this.data.baseInfo.realPrice;
 
-//     // 2.加入到购物车列表
-//     app.addToCart(obj)
+  //     // 2.加入到购物车列表
+  //     app.addToCart(obj)
 
-//     // 3.加入成功提示
-//     wx.showToast({
-//       title: '加入购物车成功',
-//     })
-//   }
+  //     // 3.加入成功提示
+  //     wx.showToast({
+  //       title: '加入购物车成功',
+  //     })
+  //   }
 })

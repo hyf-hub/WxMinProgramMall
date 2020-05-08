@@ -1,0 +1,54 @@
+/* pages/home/detail/childCmps/w-detailtabbar/w-detailtabbar.wxss */
+
+.icon {
+  width: 60rpx;
+}
+
+.left {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.tabbar {
+  display: flex;
+  height: 150rpx;
+  align-items: center;
+  background-color: white;
+}
+
+.right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+}
+
+.right>view {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  font-size: 35rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.right>view:first-child {
+  color: #95a5a6;
+  background-color: #ffe817;
+}
+
+.right>view:last-child {
+  color: #d35400;
+  background-color: #fff;
+}

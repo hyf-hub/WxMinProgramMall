@@ -1,23 +1,22 @@
 // pages/home/detail/childCmps/w-shopinfo/w-shopinfo.js
-// const computedBehavior = require('../../../../../npms/miniprogram_npm/miniprogram-computed')
-// const computedBehavior = require('miniprogram-computed')
+const computedBehavior = require('miniprogram-computed')
 Component({
   /**
    * 组件的属性列表
    */
-  // behaviors: [computedBehavior],
+  behaviors: [computedBehavior],
   properties: {
-    info:{
-      type:Object,
-      value:null
+    info: {
+      type: Object,
+      value: null
     }
   },
   computed: {
-    isBetter(isBetter){
-      return isBetter?'red':'green'
+    isBetter(isBetter) {
+      return isBetter ? 'red' : 'green'
     },
-    test(){
-      return '1111'
+    sell(data) {
+      return data.info?(data.info.sells > 10000 ? (data.info.sells / 10000).toFixed(1) + "万" : data.info.sells):'0'
     }
   },
   /**

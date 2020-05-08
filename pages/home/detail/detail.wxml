@@ -1,10 +1,9 @@
 <!-- pages/home/detail/detail.wxml -->
-<!-- <text>pages/home/detail/detail.wxml</text> -->
-<!-- <w-swiper class="swiper" list="{{topImages}}" /> -->
-<!-- <w-baseinfo info="{{baseInfo}}" /> -->
-<!-- <w-shopinfo info="{{shopInfo}}" /> -->
-<!-- <w-detailInfo detailinfo="{{detailInfo}}" /> -->
-<!-- <w-paramInfo paramInfo="{{paramInfo}}" /> -->
+<w-swiper class="swiper" list="{{topImages}}" />
+<w-baseinfo info="{{baseInfo}}" />
+<w-shopinfo info="{{shopInfo}}" />
+<w-detailInfo detailinfo="{{detailInfo}}" />
+<w-paramInfo paramInfo="{{paramInfo}}" />
 <w-comment commentInfo="{{commentInfo}}" />
-
-  
+<w-goodslist list="{{recommends}}" />
+<w-detailtabbar bind:addcart="addcart" class="tabbar" />

@@ -1,0 +1,32 @@
+/* components/w-select/w-select.wxss */
+.icon {
+  width: 39rpx;
+  height: 39rpx;
+  border: 2rpx solid black;
+  border-radius: 50%;
+  align-self: center;
+  text-align: left;
+  /* margin-right: 15rpx; */
+}
+.selected{
+    border-radius: 50%;
+    align-self: center;
+    text-align: left;
+}
+.select{
+   border-radius: 50%;
+   align-self: center;
+   text-align: left;
+    border: 2rpx solid #ff5777;
+}
+.selecticon {
+  border: 2rpx solid black;
+  border-radius: 50%;
+  align-self: center;
+  text-align: left;
+  border-color: #ff5777;
+  /* margin-right: 15rpx; */
+}
+.box{
+  display: flex;
+}

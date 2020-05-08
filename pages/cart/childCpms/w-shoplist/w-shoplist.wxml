@@ -1,0 +1,4 @@
+<!-- pages/cart/childCpms/w-shoplist/w-shoplist.wxml -->
+<block wx:for="{{cartlist}}" wx:key="index">
+  <w-shop item="{{item}}" bind:select = "select" data-index = "{{index}}" />
+</block>

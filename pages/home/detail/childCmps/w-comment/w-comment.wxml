@@ -11,20 +11,15 @@
   <view class="content">
     <view class="comentcontent">{{commentInfo.content}}</view>
     <view>
-      {{commentInfo.created}}
+      {{detailtiem}}
                   {{commentInfo.style}}
                                     {{commentInfo.style}}
     </view>
     <block wx:for="{{commentInfo.extraInfo}}" wx:key="index">{{item}}</block>
   </view>
   <view class="imagelist">
-      <block wx:for="{{commentInfo.images}}" wx:key="index">
-          <image src="{{item}}" mode="widthFix" lazy-load />
-      </block>
+    <block wx:for="{{commentInfo.images}}" wx:key="index">
+      <image src="{{item}}" mode="widthFix" lazy-load />
+    </block>
   </view>
-    
 </view>
-<view>
-  {{sum(a,b)}}
-</view>
-  

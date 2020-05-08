@@ -1,0 +1,39 @@
+/* pages/cart/childCpms/w-cartbottom/w-cartbottom.wxss */
+.cart {
+  display: flex;
+  font-size: 35rpx;
+}
+
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  background-color: #bdc3c7;
+}
+
+.left {
+  width: 60%;
+  display: flex;
+}
+.icon{
+  padding: 0 10rpx;
+}
+.left>view {
+  flex: 1;
+}
+
+.right {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff4500;
+  color: white;
+}

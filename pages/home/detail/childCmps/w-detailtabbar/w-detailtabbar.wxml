@@ -1,0 +1,19 @@
+<!-- pages/home/detail/childCmps/w-detailtabbar/w-detailtabbar.wxml -->
+<view class="tabbar">
+  <view class="left">
+    <block wx:for="{{shoplist}}" wx:key="index">
+      <view class="column">
+        <image class="icon" src="{{item.icon}}" mode="widthFix" lazy-load />
+        <view>{{item.title}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="right">
+    <view bind:tap="addcart">
+      <view>加入购物车</view>
+    </view>
+    <view bind:tap="buy">
+      <view>购买</view>
+    </view>
+  </view>
+</view>
